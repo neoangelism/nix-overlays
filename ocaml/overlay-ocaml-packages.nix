@@ -232,12 +232,12 @@ in
 rec {
   ocaml-ng = custom-ocaml-ng // oPs // {
     ocamlPackages = overlaySinglePackageSet custom-ocaml-ng.ocamlPackages;
-    ocamlPackages_latest = oPs.ocamlPackages_5_2;
+    ocamlPackages_latest = oPs.ocamlPackages_5_3;
   };
   ocamlPackages =
     if updateOCamlPackages then
       overlaySinglePackageSet super.ocamlPackages
-    else ocaml-ng.ocamlPackages_5_2;
+    else ocaml-ng.ocamlPackages_5_3;
   ocamlPackages_latest =
     if updateOCamlPackages then
       overlaySinglePackageSet super.ocamlPackage_latest
